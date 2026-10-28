@@ -1,0 +1,24 @@
+# Steps To Follow
+
+## To add username (Ex - tony) with server (Ex - stapp01)
+- ssh username@hostname (Ex - tony@stapp01) 
+
+## It is used to create group (Ex - nautilus_noc)
+- sudo groupadd group_name (Ex - nautilus_noc)
+
+## To check whether user exists or not
+- id user_name (Ex - stark)
+
+## If it says no user found then create user named stark and add it to group
+- sudo useradd -G group_name (Ex - nautilus_noc) user_name (Ex - stark)
+
+## If you see user detail then run
+- sudo usermod -aG group_name (Ex - nautilus_noc) user_name (Ex - stark)
+- Note:- Never Forget to add -a as without it user_name will lose access to it's older groups.
+
+## To see all added members of group
+- getent group group_name (Ex - nautilus_noc)
+
+## To Exit 
+- exit
+
