@@ -1,0 +1,27 @@
+# Steps to follow
+
+## Note: Get server detail
+
+## ssh into server (Ex - username@hostname)
+- ssh username@hostname (Ex - ssh tony@stapp01)
+
+## Create user with nologin shell
+- sudo useradd username -s /sbin/nologin
+- Note: -s sets login shell and Debian / Ubuntu: Usually located at /usr/sbin/nologin
+
+## Searches system path to find exact file path with nologin
+- which nologin
+
+## Verify if it worked
+- grep username /etc/passwd (Ex - grep ravi /etc/passwd)
+- Note: We didn't use /usr/bin/passwd which comes when we type 'which passwd' as it is used when to execute something
+- while /etc/passwd is used as a database.
+
+## To switch to other user And to check if it worked.
+- sudo su - username (Ex - sudo su - ravi)
+- Here sudo is used for administrator privileges
+- If result shows 'This account is not currently available then we succed'
+
+## Exit
+- exit
+
